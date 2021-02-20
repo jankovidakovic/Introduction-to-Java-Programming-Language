@@ -9,6 +9,7 @@ import hr.fer.zemris.lsystems.impl.LSystemBuilderImpl;
  * Demonstrates the functionality of <code>LSystemBuilderImpl</code>.
  * Builder is configured from an array of strings which are parsed
  * into the directives.
+ *
  * @author jankovidakovic
  *
  */

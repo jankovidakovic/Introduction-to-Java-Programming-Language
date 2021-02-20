@@ -8,6 +8,7 @@ import hr.fer.zemris.lsystems.impl.LSystemBuilderImpl;
 /**
  * Demonstrates the functionality of <code>LSystemBuilderImpl</code>.
  * Builder is configured by the configuration commands.
+ *
  * @author jankovidakovic
  *
  */

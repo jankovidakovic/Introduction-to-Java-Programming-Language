@@ -8,6 +8,7 @@ import hr.fer.zemris.lsystems.impl.LSystemBuilderImpl;
  * Builder is configured from the config file, which is chosen at runtime.
  * Example config files are provided in the project content, under the path
  * ./lib/examples
+ *
  * @author jankovidakovic
  *
  */
