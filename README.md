@@ -25,6 +25,7 @@ Assignments are implemented using the following technologies:
 - Apache Tomcat web container
 - Apache Derby database
 - Hibernate
+
 Package structure is mostly predetermined by the course, as well as some of the file structure.
 
 ### Assignment 1 - First programs
