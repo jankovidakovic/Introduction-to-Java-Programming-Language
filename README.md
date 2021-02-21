@@ -19,12 +19,13 @@ Practical application of the course topics is done through the homework assignme
 ## Assignment description
 Below is a list of all course assignments and its basic descriptions. For a more detailed description of the implementation, feel free to check out the thorough documentation within the source code itself.
 Assignments are implemented using the following technologies:
-- Java 14
+- Java 15
 - Maven
 - JUnit 5
 - Apache Tomcat web container
 - Apache Derby database
 - Hibernate
+Package structure is mostly predetermined by the course, as well as some of the file structure.
 
 ### Assignment 1 - First programs
 A series of very simple programs are implemented, as a part of introduction to the course. Programs include:
