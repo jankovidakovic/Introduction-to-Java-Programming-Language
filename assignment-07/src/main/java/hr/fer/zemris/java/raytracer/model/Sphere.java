@@ -7,15 +7,15 @@ package hr.fer.zemris.java.raytracer.model;
  */
 public class Sphere extends GraphicalObject {
 
-	private Point3D center; // center of the sphere
-	private double radius; // radius
-	private double kdr; // scaling factor for red diffuse component
-	private double kdg; // scaling factor for green diffusive component
-	private double kdb; // scaling factor for blue diffusive component
-	private double krr; // scaling factor for red reflective component
-	private double krg; // scaling factor for green reflective component
-	private double krb; // scaling factor for blue reflective component
-	private double krn; // shineness factor
+	private final Point3D center; // center of the sphere
+	private final double radius; // radius
+	private final double kdr; // scaling factor for red diffuse component
+	private final double kdg; // scaling factor for green diffusive component
+	private final double kdb; // scaling factor for blue diffusive component
+	private final double krr; // scaling factor for red reflective component
+	private final double krg; // scaling factor for green reflective component
+	private final double krb; // scaling factor for blue reflective component
+	private final double krn; // shininess factor
 
 	/**
 	 * Constructs a sphere with given parameters
@@ -28,7 +28,7 @@ public class Sphere extends GraphicalObject {
 	 * @param krr    parameter for the red part of the reflective component
 	 * @param krg    parameter for the green part of the reflective component
 	 * @param krb    parameter for the blue part of the reflective component
-	 * @param krn    shineness factor
+	 * @param krn    shininess factor
 	 */
 	public Sphere(Point3D center, double radius, double kdr, double kdg,
 			double kdb, double krr, double krg, double krb, double krn) {
@@ -56,13 +56,13 @@ public class Sphere extends GraphicalObject {
 		// finds the root of the quadratic equation that is closest to ray's
 		// origin
 		double t = findClosestRoot(a, b, c);
-		if (Double.isNaN(t) == false) { // equation has at least one root
+		if (!Double.isNaN(t)) { // equation has at least one root
 			Point3D pointOfIntersection =
 					ray.start.add(ray.direction.scalarMultiply(t));
 			double distance = pointOfIntersection.sub(ray.start).norm();
 			return new RayIntersection(pointOfIntersection, distance,
 					pointOfIntersection.sub(center).norm()
-							> radius ? true : false) {
+							> radius) {
 
 				@Override
 				public Point3D getNormal() {
@@ -115,7 +115,7 @@ public class Sphere extends GraphicalObject {
 	 * 
 	 * @param  a second degree factor
 	 * @param  b first degree factor
-	 * @param  c zeroeth degree factor
+	 * @param  c zeroth degree factor
 	 * @return   smallest real solution, or Double.NaN if there are no real
 	 *           solutions.
 	 */

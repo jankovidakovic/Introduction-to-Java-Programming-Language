@@ -190,16 +190,10 @@ public class RayCasterParallel2 {
 			Scene scene = RayTracerViewer.createPredefinedScene2(); //WAS WITHOUT 2
 
 			short[] rgb = new short[3];
-			int offset = yMin * height; //was -1 right here
+			int offset = yMin * height;
 			for (int y = yMin; y < yMax; y++) {
 				for (int x = 0; x < width; x++) {
 
-					/*
-					if (offset == -1) {
-						offset = yMin * height + x;
-					}
-
-					 */
 
 					Point3D screenPoint = screenCorner
 							.add(xAxis.scalarMultiply(
@@ -211,15 +205,20 @@ public class RayCasterParallel2 {
 
 					tracer(scene, ray, rgb);
 
-					red[offset] = rgb[0] > 255 ? 255 : rgb[0];
-					green[offset] = rgb[1] > 255 ? 255 : rgb[1];
-					blue[offset] = rgb[2] > 255 ? 255 : rgb[2];
+					try {
+						red[offset] = rgb[0] > 255 ? 255 : rgb[0];
+						green[offset] = rgb[1] > 255 ? 255 : rgb[1];
+						blue[offset] = rgb[2] > 255 ? 255 : rgb[2];
+					} catch (ArrayIndexOutOfBoundsException ignored) {
+						//exception can happen due to the viewer window dimensions being stretched out
+					}
 
 					offset++;
 				}
 			}
 
 		}
+
 	}
 
 

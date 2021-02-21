@@ -67,7 +67,7 @@ public class RayCaster {
 								.add(yAxis.scalarMultiply(vertical / 2));
 
 				// create scene for drawing
-				Scene scene = RayTracerViewer.createPredefinedScene();
+				Scene scene = RayTracerViewer.createPredefinedScene(); //was 1
 
 				short[] rgb = new short[3]; // rgb values for one specific pixel
 				int offset = 0; // position in the main color array
