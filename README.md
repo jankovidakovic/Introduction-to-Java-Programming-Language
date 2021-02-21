@@ -66,7 +66,7 @@ A very simple collection framework is implemented that showcases the extensive u
 - Command-line shell interface
   - A simple shell that can execute some basic filesystem commands is implemented from scratch. It supports UNIX-like commands such as `cat`, `ls`, `tree`, `copy` and `hexdump`. For more information, check the well-documented code. 
 
-### Assignment 9 - Multithreading
+### Assignment 7 - Multithreading
 - Vectors and Complex Numbers
   - a simple mathematical framework is implemented that supports the usage of 3-dimensional vectors, complex numbers and complex polynomials
 - Newton Fractal producer 
@@ -74,13 +74,13 @@ A very simple collection framework is implemented that showcases the extensive u
 - 3D Ray Caster
   - A multithreaded ray caster is implemented using the various Java-provided multithreaded frameworks and math libraries implemented in the earlier part of the assignment.    
 
-### Assignment 10 - Swing, AWT
+### Assignment 8 - Swing, AWT
 - GUI calculator with custom layout manager
   - Using the Java Swing framework, a custom Layout Manager is implemented from scratch, and used to develop a fully-working calculator application. Notable is the extenside use of the command design pattern.
 - Bar Chart drawer
   - A configurable bar chart drawer is implemented from scratch in the Java AWT framework.
 
-### Assignment 11 - Advanced Swing
+### Assignment 9 - Advanced Swing
 An advanted notepad is implemented in Java Swing. Besides basic text editing, it supports the following functionalities:
 - opening and saving files
 - editing multiple files at once using tabs
@@ -88,7 +88,7 @@ An advanted notepad is implemented in Java Swing. Besides basic text editing, it
 - internationalization and localization, which includes support for Croatian, English and German across the whole application interface
 - text manipulation such as lowercasing, uppercasing, sorting and removing duplicate words
 
-### Assignment 12 - Network applications
+### Assignment 10 - Network applications
 In this assignment, a simple web-server is implemented from scratch. It supports the following functionalities:
 - multithreaded client connections
 - session storage
@@ -99,7 +99,7 @@ In this assignment, a simple web-server is implemented from scratch. It supports
 - custom templating language
 The template language, called SmartScript, is an extension of the third assignment, in which the lexer and parser were implemented. In this assignment, the language is upgraded with dynamic type system and an engine that executes the commands.
 
-### Assignment 13 - Web applications (Servlets, JSP)
+### Assignment 11 - Web applications (Servlets, JSP)
 Servlets and JSP are used to develop a simple web application with various features, implemented as separate Java Server Pages. Application is deployed inside Apache Tomcat container. Application features include:
 - background color chooser
 - table of sine and cosine values for the range specified in URL parameters
@@ -109,8 +109,8 @@ Servlets and JSP are used to develop a simple web application with various featu
 - application running time information
 - a simple voting application, with results dynamically displayed as a bar chart and available as an XLS file
 
-### Assignment 14 - Web applications (JDBC)
+### Assignment 12 - Web applications (JDBC)
 Voting application from the previous assignment is extended so that the data is stored in the database. Apache Derby is used, and is managed from within the application using the JDBC.
 
-### Assignment 15 - Web applications (JPA)
+### Assignment 13 - Web applications (JPA)
 A simple multiple-user blog application is implemented from scratch. Application supports multiple user sessions and role-based content access. It is deployed within Apache Tomcat container, and uses the JPA and Hibernate to persist the data in the Apache Derby database.
