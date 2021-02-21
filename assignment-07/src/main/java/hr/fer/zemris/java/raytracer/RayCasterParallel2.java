@@ -89,7 +89,6 @@ public class RayCasterParallel2 {
 	}
 
 	public static class RayCastingAction extends RecursiveAction {
-		private static final long serialVersionUID = 1L;
 		private Point3D eye;
 		private Point3D view;
 		private Point3D viewUp;
@@ -104,7 +103,7 @@ public class RayCasterParallel2 {
 		short[] blue;
 		AtomicBoolean cancel;
 
-		static final int treshold = 16;
+		static final int threshold = 16;
 
 
 		/**
@@ -153,7 +152,7 @@ public class RayCasterParallel2 {
 			if (cancel.get()) {
 				return;
 			}
-			if (yMax - yMin < treshold) {
+			if (yMax - yMin < threshold) {
 				computeWithoutDecomposition();
 			} else {
 				invokeAll(new RayCastingAction(eye, view, viewUp, horizontal,
@@ -298,14 +297,14 @@ public class RayCasterParallel2 {
 	private static short[] determineColorFor(Scene scene,
 			RayIntersection intersection, Point3D eye) {
 
-		// intersection starts at eye, closestIntersection starts at lightsource
+		// intersection starts at eye, closestIntersection starts at light source
 
 		short[] rgb = new short[] { 15, 15, 15 }; // ambient component
 		List<LightSource> lights = scene.getLights();
 		for (LightSource light : lights) { // for each light source
 			Ray lightRay =
 					Ray.fromPoints(light.getPoint(), intersection.getPoint());
-			// find first object taht the light ray hits
+			// find first object that the light ray hits
 			RayIntersection closestIntersection =
 					findClosestIntersection(scene, lightRay);
 			if (closestIntersection != null) { // there exists at least one
@@ -313,9 +312,7 @@ public class RayCasterParallel2 {
 						.sub(light.getPoint()).norm();
 				double distanceOriginalToLS =
 						intersection.getPoint().sub(light.getPoint()).norm();
-				if (distanceClosestToLS - distanceOriginalToLS < -1E-9) {
-					continue;
-				} else { // light source contributes
+				if (distanceClosestToLS - distanceOriginalToLS >= -1E-9) {
 
 					// diffuse component
 					Point3D l = light.getPoint().sub(intersection.getPoint())

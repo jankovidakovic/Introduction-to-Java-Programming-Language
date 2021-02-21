@@ -46,8 +46,8 @@ public class Newton {
 			int yMax, int m,
 			short[] data, AtomicBoolean cancel) {
 		
-		double convergenceTreshold = 1E-3;
-		double rootTreshold = 0.002;
+		double convergenceThreshold = 1E-3;
+		double rootThreshold = 0.002;
 		int offset = width * yMin;
 		for (int y = yMin; y <= yMax; y++) {
 			if (cancel.get()) {
@@ -71,10 +71,10 @@ public class Newton {
 					Complex fraction = numerator.divide(denominator);
 					zn = zn.sub(fraction);
 					it++;
-				} while (zn.sub(znold).module() > convergenceTreshold
+				} while (zn.sub(znold).module() > convergenceThreshold
 						&& it < m);
 				int colorIndex = rootedPolynomial.indexOfClosestRootFor(zn,
-						rootTreshold);
+						rootThreshold);
 				data[offset++] = (short) (colorIndex + 1);
 				// System.out.println(colorIndex + 1);
 			}
@@ -83,7 +83,7 @@ public class Newton {
 	public static void main(String[] args) {
 
 		System.out.println(
-				"Welcome to Newton-Raphson iteration-based fractal viewer.");
+				"Welcome to Newton-Rhapson iteration-based fractal viewer.");
 		System.out.println(
 				"Please enter at least two roots, one per line. "
 						+ "Enter 'done' when done.");
@@ -142,7 +142,7 @@ public class Newton {
 		 * @param m      number of iterations
 		 * @param data   indexes of roots in which observed complex point c has
 		 *               converged or 0 if no convergence to a root occurred.
-		 * @param cancel
+		 * @param cancel shared flag that signalizes whether the thread should cancel the assigned action
 		 */
 		public IterationJob(double reMin, double reMax, double imMin,
 				double imMax, int width, int height, int yMin, int yMax, int m,
