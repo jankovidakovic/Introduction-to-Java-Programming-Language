@@ -1,0 +1,4 @@
+This is a sample text file. If the content 
+of the file is displayed in the browser, that means
+that the Smart HTTP Server is loading text files
+correctly. Congrats!

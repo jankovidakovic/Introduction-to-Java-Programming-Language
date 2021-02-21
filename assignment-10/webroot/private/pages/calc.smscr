@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table, td {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Zbrajanje</h1>
+		<div>
+			<table>
+				<tr>
+					<td>a</td>
+					<td>{$= "varA" 1 @tparamGet $}</td>
+				</tr>
+				<tr>
+					<td>b</td>
+					<td>{$= "varB" 2 @tparamGet $}</td>
+				</tr>
+				<tr>
+					<td>a+b</td>
+					<td>{$= "zbroj" 3 @tparamGet $}</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<img src="{$= "imgName" "./webroot/images/image1.png" @tparamGet $}" alt="Slika">
+		</div>
+	</body>
+</html>
