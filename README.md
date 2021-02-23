@@ -54,7 +54,7 @@ A very simple collection framework is implemented that showcases the extensive u
   - A simple map is implemented as a part of the collection framework, and the implementation is done using the adapter design patter, with the `ArrayIndexedCollection` as inner collection.
 - More advanced map implementation
   - A more general hash map is implemented, with an array of map entries as an inner collection and a simple hashing algorithm for indexing the collection. Dynamic size management is also implemented, as well as fully functioning map iterator, with proper usage of `ConcurrentModificationException`.
-  -   
+  
 ### Assignment 5 - Java Collection Framework
 - Lindermayer Fractal Producer
   - Implementation of Lindermayer fractal producer. Configuration parser is implemented for loading the information about the Lindermayer system. Then, a simple turtle graphics system is implemented and the fractal is produced using the turtle commands and course-provided JAR libraries.
