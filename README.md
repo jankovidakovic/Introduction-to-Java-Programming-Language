@@ -19,12 +19,14 @@ Practical application of the course topics is done through the homework assignme
 ## Assignment description
 Below is a list of all course assignments and its basic descriptions. For a more detailed description of the implementation, feel free to check out the thorough documentation within the source code itself.
 Assignments are implemented using the following technologies:
-- Java 14
+- Java 15
 - Maven
 - JUnit 5
 - Apache Tomcat web container
 - Apache Derby database
 - Hibernate
+
+Package structure is mostly predetermined by the course, as well as some of the file structure.
 
 ### Assignment 1 - First programs
 A series of very simple programs are implemented, as a part of introduction to the course. Programs include:
@@ -52,7 +54,7 @@ A very simple collection framework is implemented that showcases the extensive u
   - A simple map is implemented as a part of the collection framework, and the implementation is done using the adapter design patter, with the `ArrayIndexedCollection` as inner collection.
 - More advanced map implementation
   - A more general hash map is implemented, with an array of map entries as an inner collection and a simple hashing algorithm for indexing the collection. Dynamic size management is also implemented, as well as fully functioning map iterator, with proper usage of `ConcurrentModificationException`.
-  -   
+  
 ### Assignment 5 - Java Collection Framework
 - Lindermayer Fractal Producer
   - Implementation of Lindermayer fractal producer. Configuration parser is implemented for loading the information about the Lindermayer system. Then, a simple turtle graphics system is implemented and the fractal is produced using the turtle commands and course-provided JAR libraries.
@@ -113,4 +115,4 @@ Servlets and JSP are used to develop a simple web application with various featu
 Voting application from the previous assignment is extended so that the data is stored in the database. Apache Derby is used, and is managed from within the application using the JDBC.
 
 ### Assignment 13 - Web applications (JPA)
-A simple multiple-user blog application is implemented from scratch. Application supports multiple user sessions and role-based content access. It is deployed within Apache Tomcat container, and uses the JPA and Hibernate to persist the data in the Apache Derby database.
+A simple multiple-user blog application is implemented from scratch. Application supports multiple user sessions and role-based content access. It is deployed within Apache Tomcat container, and uses the JPA and Hibernate to persist the data in the Apache Derby database. Implementation is done in a layered-based architecture. Persistence layer is implemented mostly from scratch, which includes implementation of DAO and JPA interfaces, providers and database connection management. Security is implemented in the form of password hashing. Finally, model and web layers are implemented to support the full functionality of the application.
